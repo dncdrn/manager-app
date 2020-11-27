@@ -1,5 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;600&display=swap");
+
 .App {
-  text-align: center;
+  position: relative;
+  padding: 30px;
 }
 
 .App-logo {
@@ -35,4 +38,99 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+body {
+  background-image: -webkit-linear-gradient(
+    -45deg,
+    rgb(215, 230, 255) 0%,
+    rgb(243, 219, 246) 50%,
+    rgb(240, 220, 247) 55%,
+    rgb(217, 227, 255) 100%
+  );
+  background-size: cover;
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+
+body:after {
+  background: url("./assets/left_bottom.png") no-repeat right top;
+  content: "";
+  left: 0;
+  bottom: 0;
+  position: absolute;
+  width: 472px;
+  height: 354px;
+  z-index: -1;
+}
+.App:before {
+  content: "";
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  width: 467px;
+  height: 610px;
+  background: url("./assets/right_top.png") no-repeat right top;
+}
+:before {
+  content: "";
+  right: 0;
+  top: 0;
+  position: absolute;
+  width: 587px;
+  height: 705px;
+  background: url("./assets/right_top.png") no-repeat right top;
+  z-index: -1;
+}
+.container {
+  padding: 16px 32px;
+  margin-bottom: 16px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.8);
+  -webkit-box-shadow: 0px 16px 25px 0px rgba(118, 88, 198, 0.1);
+  -moz-box-shadow: 0px 16px 25px 0px rgba(118, 88, 198, 0.1);
+  box-shadow: 0px 16px 25px 0px rgba(118, 88, 198, 0.1);
+  color: #4c61a2;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 30px;
+  color: #4c5f99;
+}
+.list-container {
+  overflow-y: scroll;
+  height: 80vh;
+  padding: 10px;
+}
+.list-container::-webkit-scrollbar-thumb {
+  background: #f8f7fb;
+  opacity: 0.4;
+}
+.comment {
+  margin-left: 40px;
+}
+em {
+  font-style: normal;
+  vertical-align: middle;
+  color: #9aa7d1;
+  font-size: 11px;
+  line-height: 15px;
+  font-weight: bold;
+}
+[data-initials] {
+  background: #099bdd;
+  color: white;
+  opacity: 1;
+  content: attr(data-initials);
+  display: inline-block;
+  font-weight: bold;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin-right: 0.5em;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  z-index: 1;
 }
