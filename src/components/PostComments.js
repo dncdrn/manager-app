@@ -9,8 +9,10 @@ export default function PostComments({ postComment }) {
       </div>
       <div className="avatar-initial">{avatarInitial}</div>
       <b>{postComment.name}</b>
-      <div>{postComment.email}</div>
-      <div>{postComment.body}</div>
+      <div style={{ marginLeft: "65px" }}>
+        <div>{postComment.email}</div>
+        <div>{postComment.body}</div>
+      </div>
     </div>
   );
 }
