@@ -5,12 +5,13 @@ export default function SearchBox({
   setPostComments,
 }) {
   function handleFilterComments(text) {
+    const textToLowerCase = text.toLowerCase();
     const commentsToBeFiltered = [...postComments];
     const filtered = commentsToBeFiltered.filter(
-      (comment, index) =>
-        comment.name.includes(text) ||
-        comment.email.includes(text) ||
-        comment.body.includes(text)
+      (comment) =>
+        comment.name.includes(textToLowerCase) ||
+        comment.email.includes(textToLowerCase) ||
+        comment.body.includes(textToLowerCase)
     );
     setPostComments(filtered);
 
