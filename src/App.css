@@ -5,41 +5,6 @@
   padding: 30px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 body {
   background-image: -webkit-linear-gradient(
     -45deg,
@@ -82,39 +47,7 @@ body:after {
   background: url("./assets/right_top.png") no-repeat right top;
   z-index: -1;
 }
-.container {
-  padding: 16px 32px;
-  margin-bottom: 16px;
-  border-radius: 16px;
-  background: rgba(255, 255, 255, 0.8);
-  -webkit-box-shadow: 0px 16px 25px 0px rgba(118, 88, 198, 0.1);
-  -moz-box-shadow: 0px 16px 25px 0px rgba(118, 88, 198, 0.1);
-  box-shadow: 0px 16px 25px 0px rgba(118, 88, 198, 0.1);
-  color: #4c61a2;
-}
 
-.title {
-  font-weight: bold;
-  font-size: 30px;
-  color: #4c5f99;
-}
-.list-container {
-  overflow-y: scroll;
-  height: 80vh;
-  padding: 10px;
-}
-.post-container {
-  overflow-y: scroll;
-  height: 50vh;
-  padding: 10px;
-}
-.list-container::-webkit-scrollbar-thumb {
-  background: #f8f7fb;
-  opacity: 0.4;
-}
-.comment {
-  margin-left: 40px;
-}
 em {
   font-style: normal;
   vertical-align: middle;
@@ -123,103 +56,8 @@ em {
   line-height: 15px;
   font-weight: bold;
 }
-.avatar-initial {
-  background: #ff5f6d; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to bottom,
-    #ffc371,
-    #ff5f6d
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to bottom,
-    #ffc371,
-    #ff5f6d
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-  color: white;
-  opacity: 1;
-  display: inline-block;
-  font-weight: bold;
-  border-radius: 50%;
-  vertical-align: middle;
-  margin-right: 0.5em;
-  width: 50px;
-  height: 50px;
-  line-height: 50px;
-  text-align: center;
-  z-index: 1;
-  font-size: 30px;
-}
-.loading-container {
-  height: 90vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.loading-gif {
-  display: flex;
-  border-radius: 1000px;
-  width: 300px;
-}
-.search-box {
-  display: inline-block;
-  width: 100%;
-}
-.post-text {
-  font-size: 22px;
-}
-.post-avatar {
-  background: #c33764; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #1d2671,
-    #c33764
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #1d2671,
-    #c33764
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-  color: white;
-  opacity: 1;
-  display: inline-block;
-  font-weight: bold;
-  border-radius: 50%;
-  vertical-align: middle;
-  margin-right: 0.5em;
-  width: 20px;
-  height: 20px;
-  line-height: 20px;
-  text-align: center;
-  z-index: 1;
-  font-size: 10px;
-}
-.post-title {
+.Link {
+  text-decoration: none;
   text-transform: capitalize;
-  font-size: 25px;
-  font-weight: bold;
-}
-.comment-identity {
-  display: flex;
-  flex-direction: column;
-}
-.comment-name {
-  text-transform: capitalize;
-  font-size: 18px;
-}
-.comment-label {
-  font-size: 20px;
-  font-weight: bold;
-  color: #4c5f99;
-}
-.search-textbox {
-  width: 40%;
-  height: 30px;
-  margin-bottom: 10px;
-  margin-left: 5px;
-  border-radius: 40px;
-  border: 0px;
-  padding-left: 10px;
 }
