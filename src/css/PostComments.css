@@ -1,0 +1,44 @@
+.PostComments__List {
+  margin-left: "40px";
+}
+.PostComments__Holder {
+  display: flex;
+}
+.PostComments__Avatar {
+  background: #ff5f6d; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to bottom,
+    #ffc371,
+    #ff5f6d
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    #ffc371,
+    #ff5f6d
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  color: white;
+  opacity: 1;
+  display: inline-block;
+  font-weight: bold;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin-right: 0.5em;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  z-index: 1;
+  font-size: 30px;
+}
+.PostComments__Container {
+  display: flex;
+  flex-direction: column;
+}
+.PostComments__Name {
+  text-transform: capitalize;
+  font-size: 18px;
+}
+.PostComments__Body {
+  margin-left: 65px;
+}

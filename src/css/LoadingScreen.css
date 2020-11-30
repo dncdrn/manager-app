@@ -1,0 +1,13 @@
+.LoadingScreen__Container {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #4c5f99;
+}
+.LoadingScreen__Gif {
+  display: flex;
+  border-radius: 1000px;
+  width: 300px;
+}

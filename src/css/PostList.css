@@ -1,0 +1,14 @@
+.PostList__title {
+  font-weight: bold;
+  font-size: 30px;
+  color: #4c5f99;
+}
+.PostList__Container {
+  overflow-y: scroll;
+  height: 80vh;
+  padding: 10px;
+}
+.PostList__Container::-webkit-scrollbar-thumb {
+  background: #f8f7fb;
+  opacity: 0.4;
+}
