@@ -9,14 +9,14 @@ export default function SearchBox({
   function handleFilterComments(text) {
     const textToLowerCase = text.toLowerCase();
     const commentsToBeFiltered = [...postComments];
-    const filtered = commentsToBeFiltered.filter(
-      (comment) =>
+    const filtered = commentsToBeFiltered.filter((comment) => {
+      return (
+        comment.email.toLowerCase().includes(textToLowerCase) ||
         comment.name.includes(textToLowerCase) ||
-        comment.email.includes(textToLowerCase) ||
         comment.body.includes(textToLowerCase)
-    );
+      );
+    });
     setPostComments(filtered);
-
     if (!text) {
       setPostComments(originalPostComments);
     }
