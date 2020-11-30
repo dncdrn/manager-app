@@ -42,7 +42,7 @@ export default function PostListWithComments() {
         <LoadingScreen />
       ) : (
         <div>
-          <Link to="/post" className="Link">
+          <Link to="/posts" className="Link">
             <div className="PostList__title">Post</div>
           </Link>
           {postDetail && <PostItem post={postDetail} />}

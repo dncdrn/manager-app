@@ -10,10 +10,10 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Switch>
-          <Route exact path="/post">
+          <Route exact path="/posts">
             <PostList />
           </Route>
-          <Route path="/post/:postID">
+          <Route path="/posts/:postID">
             <PostListWithComments />
           </Route>
         </Switch>
