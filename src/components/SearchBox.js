@@ -20,14 +20,12 @@ export default function SearchBox({
     }
   }
   return (
-    <input
-      onChange={(e) => handleFilterComments(e.target.value)}
-      style={{
-        width: "40%",
-        height: "40px",
-        marginBottom: "10px",
-      }}
-      placeholder="Search name, email or body here"
-    />
+    <div>
+      <input
+        onChange={(e) => handleFilterComments(e.target.value)}
+        className="search-textbox"
+        placeholder="Search comments by name, email or body here"
+      />
+    </div>
   );
 }

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import PostComments from "../components/PostComments";
 import PostItem from "../components/PostItem";
 import SearchBox from "../components/SearchBox";
@@ -39,13 +39,17 @@ export default function PostListWithComments() {
         <LoadingScreen />
       ) : (
         <div>
-          <div className="title">Post</div>
+          <Link to="/post" style={{ textDecoration: "none" }}>
+            <div className="title">Post</div>
+          </Link>
           {postDetail && <PostItem post={postDetail} />}
+          <span className="comment-label">Comments</span>
           <SearchBox
             postComments={postComments}
             setPostComments={setPostComments}
             originalPostComments={originalPostComments}
           />
+
           <div className="post-container">
             {postComments &&
               postComments.map((postComment) => (

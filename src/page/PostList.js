@@ -10,6 +10,7 @@ export default function PostList() {
   useEffect(() => {
     const fetchPosts = async () => {
       const posts = await getAllPost();
+
       setListOfPosts(posts);
       setLoading(false);
     };
