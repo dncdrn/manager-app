@@ -21,7 +21,7 @@ export default function PostItem({ post }) {
         <em>Author User {post.userId}</em>
         <div className="PostItem__Title">{post.title}</div>
         <div className="PostItem__Text">{post.body}</div>
-        <Link className="Link" to={`/post/${post.id}`}>
+        <Link className="Link" to={`/posts/${post.id}`}>
           <em>{postCommentCount} comments</em>
         </Link>
       </div>
