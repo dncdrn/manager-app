@@ -1,0 +1,8 @@
+.NoData__Container {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #4c5f99;
+}

@@ -1,0 +1,45 @@
+.PostItem__Container {
+  padding: 16px 32px;
+  margin-bottom: 16px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.8);
+  -webkit-box-shadow: 0px 16px 25px 0px rgba(118, 88, 198, 0.1);
+  -moz-box-shadow: 0px 16px 25px 0px rgba(118, 88, 198, 0.1);
+  box-shadow: 0px 16px 25px 0px rgba(118, 88, 198, 0.1);
+  color: #4c61a2;
+}
+.PostItem__Avatar {
+  background: #c33764; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #1d2671,
+    #c33764
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #1d2671,
+    #c33764
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  color: white;
+  opacity: 1;
+  display: inline-block;
+  font-weight: bold;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin-right: 0.5em;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  z-index: 1;
+  font-size: 10px;
+}
+.PostItem__Title {
+  text-transform: capitalize;
+  font-size: 25px;
+  font-weight: bold;
+}
+.PostItem__Text {
+  font-size: 22px;
+}
