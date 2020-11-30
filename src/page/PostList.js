@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import PostItem from "../components/PostItem";
 import { getAllPost } from "../service/postAPI";
 import LoadingScreen from "../components/LoadingScreen";
+import "../css/PostList.css";
+import NoData from "../components/NoData";
 
 export default function PostList() {
   const [listOfPosts, setListOfPosts] = useState([]);
@@ -10,7 +12,6 @@ export default function PostList() {
   useEffect(() => {
     const fetchPosts = async () => {
       const posts = await getAllPost();
-
       setListOfPosts(posts);
       setLoading(false);
     };
@@ -23,10 +24,16 @@ export default function PostList() {
         <LoadingScreen />
       ) : (
         <div>
-          <div className="title">Posts</div>
-          <div className="list-container">
-            {listOfPosts && listOfPosts.map((post) => <PostItem post={post} />)}
-          </div>
+          <div className="PostList__title">Posts</div>
+          {listOfPosts.length ? (
+            <div className="PostList__Container">
+              {listOfPosts.map((post) => (
+                <PostItem post={post} />
+              ))}
+            </div>
+          ) : (
+            <NoData label="No Posts Yet" />
+          )}
         </div>
       )}
     </>

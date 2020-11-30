@@ -1,4 +1,6 @@
 import React from "react";
+import "../css/SearchBox.css";
+
 export default function SearchBox({
   originalPostComments,
   postComments,
@@ -23,7 +25,7 @@ export default function SearchBox({
     <div>
       <input
         onChange={(e) => handleFilterComments(e.target.value)}
-        className="search-textbox"
+        className="SearchBox__Input"
         placeholder="Search comments by name, email or body here"
       />
     </div>

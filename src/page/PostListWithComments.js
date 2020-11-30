@@ -8,13 +8,16 @@ import {
   getSinglePostWithComments,
 } from "../service/postAPI";
 import LoadingScreen from "../components/LoadingScreen";
+import "../css/PostListWithComments.css";
+import "../css/PostList.css";
+import NoData from "../components/NoData";
 
 export default function PostListWithComments() {
   let { postID } = useParams();
 
   const [postDetail, setPostDetail] = useState();
-  const [postComments, setPostComments] = useState();
-  const [originalPostComments, setOriginalPostComments] = useState();
+  const [postComments, setPostComments] = useState([]);
+  const [originalPostComments, setOriginalPostComments] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -39,23 +42,26 @@ export default function PostListWithComments() {
         <LoadingScreen />
       ) : (
         <div>
-          <Link to="/post" style={{ textDecoration: "none" }}>
-            <div className="title">Post</div>
+          <Link to="/post" className="Link">
+            <div className="PostList__title">Post</div>
           </Link>
           {postDetail && <PostItem post={postDetail} />}
-          <span className="comment-label">Comments</span>
+          <span className="PostListWithComments__Label">Comments</span>
           <SearchBox
             postComments={postComments}
             setPostComments={setPostComments}
             originalPostComments={originalPostComments}
           />
 
-          <div className="post-container">
-            {postComments &&
-              postComments.map((postComment) => (
+          {postComments.length ? (
+            <div className="PostListWithComments__Container">
+              {postComments.map((postComment) => (
                 <PostComments postComment={postComment} />
               ))}
-          </div>
+            </div>
+          ) : (
+            <NoData label="No Comments" />
+          )}
         </div>
       )}
     </div>
